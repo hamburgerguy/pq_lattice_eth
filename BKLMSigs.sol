@@ -16,4 +16,14 @@ contract BKLMSigs {
         return tmp;
     }
     
+    function arrCentral(int[] calldata arr, int q) pure public returns (int[] memory)
+    {
+        int[] memory res;
+        for (uint i = 0; i < arr.length; i++)
+        {
+            res[i] = central(arr[i], q);
+        }
+        return res;
+    }
+    
 }
