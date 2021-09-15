@@ -26,4 +26,19 @@ contract BKLMSigs {
         return res;
     }
     
+    function polyAdd(int[] calldata p1, int[] calldata p2, int q) pure public returns (int[] memory) {
+        int[] memory res;
+        
+        for (uint i = 0; i < p1.length; i++)
+        {
+            res[i] = p1[i] + p2[i];
+        }
+        
+        int[] memory out = arrCentral(res, q);
+        
+        return out;
+        
+     }
+    
+    
 }
